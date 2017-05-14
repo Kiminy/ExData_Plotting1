@@ -11,6 +11,9 @@ data <- -read.table("./household_power_consumption.txt",sep=";",na.strings="?",h
 #str(subSetData)
 globalActivePower <- as.numeric(subSetData$Global_active_power)
 
+#open png graphic device
+png(filename = "plot1.png",width=480,height=480)
+
 #ploting the histogram to to the png files
 with(globalActivePower, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")
 
